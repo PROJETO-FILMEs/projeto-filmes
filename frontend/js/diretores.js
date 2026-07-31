@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
    
-    const API_URL = 'http://localhost:8080/api/filmes'; 
+    const API_URL = 'http://localhost:8080/api/diretores'; 
     
     // Variável para controlar se estamos criando ou editando um diretor
     let diretorIdEmEdicao = null; 

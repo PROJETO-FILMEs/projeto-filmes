@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* ====================================================================
-       1. CONFIGURAÇÕES DA API (Substitua pela URL do seu Back-end)
-       ==================================================================== */
-    const API_URL = 'http://localhost:8080/api/filmes'; // Exemplo de URL
+    
+    const API_URL = 'http://localhost:8080/api/estudios'; 
     
     // Variável para controlar se estamos criando ou editando um estúdio
     let estudioIdEmEdicao = null; 
