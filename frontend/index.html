@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineClássicos - Catálogo de Filmes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span>•</span><span>•</span><span>•</span>
+                    <span>•</span><span>•</span><span>•</span>
+                </div>
+                <h1>CINECLÁSSICOS <span>CATÁLOGO DE FILMES</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">INÍCIO</a></li>
+                    <li><a href="#">FILMES</a></li>
+                    <li><a href="#">DIRETORES</a></li>
+                    <li><a href="#">GÊNEROS</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="global-search" placeholder="Buscar filme...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero container">
+            <p class="listagem-geral">≣ LISTAGEM GERAL</p>
+            <h1>INÍCIO</h1>
+            <p class="subtitle">Explore nossa coleção de clássicos do cinema</p>
+            <div class="movie-count" id="movie-count-display">0 FILMES ENCONTRADOS</div>
+        </div>
+
+        <div class="content-wrapper container">
+            
+            <!-- Barra Lateral de Filtros Atualizada -->
+            <aside class="filters">
+                <div class="filter-header">
+                    <h3>⚙ FILTROS</h3>
+                    <button class="clear-filters" id="clear-filters-btn">LIMPAR</button>
+                </div>
+                
+                <div class="filter-section busco">
+                    <h4>BUSCA</h4>
+                    <div class="search-input-wrapper">
+                        <input type="text" id="filter-search-input" placeholder="Digite o título do filme...">
+                        <span class="search-icon-inner">🔍</span>
+                    </div>
+                </div>
+
+                <div class="filter-section genero">
+                    <h4>GÊNERO</h4>
+                    <ul id="genre-filter-list">
+                        <li><label><input type="checkbox" value="acao"> Ação</label></li>
+                        <li><label><input type="checkbox" value="aventura"> Aventura</label></li>
+                        <li><label><input type="checkbox" value="comedia"> Comédia</label></li>
+                        <li><label><input type="checkbox" value="documentario"> Documentário</label></li>
+                        <li><label><input type="checkbox" value="drama"> Drama</label></li>
+                        <li><label><input type="checkbox" value="fantasia"> Fantasia</label></li>
+                        <li><label><input type="checkbox" value="ficcao_cientifica"> Ficção Científica</label></li>
+                        <li><label><input type="checkbox" value="musical"> Musical</label></li>
+                        <li><label><input type="checkbox" value="policial"> Policial</label></li>
+                        <li><label><input type="checkbox" value="romance"> Romance</label></li>
+                        <li><label><input type="checkbox" value="suspense"> Suspense</label></li>
+                        <li><label><input type="checkbox" value="terror"> Terror</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section decada">
+                    <h4>DÉCADA</h4>
+                    <ul id="decade-filter-list">
+                        <li><label><input type="checkbox" value="1920"> 1920</label></li>
+                        <li><label><input type="checkbox" value="1930"> 1930</label></li>
+                        <li><label><input type="checkbox" value="1940"> 1940</label></li>
+                        <li><label><input type="checkbox" value="1950"> 1950</label></li>
+                        <li><label><input type="checkbox" value="1960"> 1960</label></li>
+                        <li><label><input type="checkbox" value="1970"> 1970</label></li>
+                        <li><label><input type="checkbox" value="1980"> 1980</label></li>
+                        <li><label><input type="checkbox" value="1990"> 1990</label></li>
+                        <li><label><input type="checkbox" value="2000"> 2000</label></li>
+                        <li><label><input type="checkbox" value="2010"> 2010</label></li>
+                        <li><label><input type="checkbox" value="2020"> 2020</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section diretor">
+                    <h4>DIRETOR</h4>
+                    <div class="search-input-wrapper">
+                        <!-- Substituído o <select> por um <input> de pesquisa -->
+                        <input type="text" id="director-search-input" placeholder="Pesquisar diretor...">
+                        <span class="search-icon-inner">🔍</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="movie-catalog">
+                <div class="catalog-header">
+                    <div class="order-by">
+                        ORDENAR POR:
+                        <select id="sort-select">
+                            <option value="titulo-a-z">Título A-Z</option>
+                            <option value="titulo-z-a">Título Z-A</option>
+                            <option value="ano-recente">Mais Recentes</option>
+                            <option value="ano-antigo">Mais Antigos</option>
+                        </select>
+                    </div>
+                    <div class="view-controls">
+                        <button class="grid-view active" id="btn-grid-view">⊞</button>
+                        <button class="list-view" id="btn-list-view">≡</button>
+                    </div>
+                </div>
+
+                <!-- Contêiner vazio aguardando o JS injetar os cards -->
+                <div class="movie-grid" id="movie-grid">
+                </div>
+
+                <!-- Contêiner vazio aguardando o JS injetar a paginação -->
+                <div class="pagination" id="pagination-container">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <div class="movie-sprocket-icon">
+                <span>•</span><span>•</span><span>•</span>
+            </div>
+            <div class="footer-quote">
+                <p>“O cinema é a forma mais direta de entrar na vida, na mente e no coração das pessoas.”</p>
+                <p>– Ingmar Bergman</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
