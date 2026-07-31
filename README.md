@@ -35,19 +35,6 @@ O projeto foi desenvolvido como integrador entre as disciplinas do **2º Semestr
 
 ---
 
-## 📌 **Sobre o Projeto**
-
-O **Sistema de Catálogo de Filmes Clássicos** foi projetado para gerenciar e catalogar obras históricas do cinema. A aplicação possui um modelo de dados relacional completo e telas especializadas para cadastro e consulta de filmes, diretores, gêneros e estúdios.
-
-### 📱 **Telas e Módulos do Sistema**
-1. 📋 **Listagem Geral de Filmes:** Tabela completa exibindo título, ano, duração, sinopse, diretor, gênero e estúdio associados.
-2. 🎬 **Cadastro de Filme:** Formulário com selects dinâmicos apontando para diretores, gêneros e estúdios cadastrados.
-3. 👤 **Cadastro de Diretor:** Registro do nome, nacionalidade e data de nascimento dos diretores.
-4. 🏷️ **Cadastro de Gênero:** Gerenciamento das categorias cinematográficas (ex: *Noir, Faroeste, Drama, Comédia Clássica*).
-5. 🏢 **Cadastro de Estúdio:** Registro dos grandes estúdios clássicos (ex: *Warner Bros, Paramount, MGM*)[cite: 2].
-
----
-
 ## 🗄️ **Estrutura do Banco de Dados (`db_filmes`)**
 
 O banco de dados conta com relacionamentos de chaves estrangeiras para garantir a integridade dos dados[cite: 2]:
