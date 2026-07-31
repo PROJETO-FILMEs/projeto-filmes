@@ -6,7 +6,7 @@ Este repositório contém todas as etapas, artefatos, códigos e documentações
 
 O projeto foi desenvolvido como integrador entre as disciplinas do **2º Semestre do Curso Técnico em Desenvolvimento de Sistemas** no **SENAI Gaspar Ricardo Junior - CFP 402 - Sorocaba/SP**.
 
-**Professor Instrutor:** [Vedilson Prado](https://github.com/vedilsonprado)[cite: 2]
+**Professor Instrutor:** [Vedilson Prado](https://github.com/vedilsonprado)
 
 ---
 
