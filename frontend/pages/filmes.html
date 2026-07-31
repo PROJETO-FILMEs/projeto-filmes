@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Filmes - CineClássicos</title>
+    <link rel="stylesheet" href="../css/filmes.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span>•</span><span>•</span><span>•</span>
+                    <span>•</span><span>•</span><span>•</span>
+                </div>
+                <h1>CINECLÁSSICOS <span>CATÁLOGO DE FILMES</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="#" class="active">FILMES</a></li>
+                    <li><a href="./diretores.html">DIRETORES</a></li>
+                    <li><a href="./generos.html">GÊNEROS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container" style="max-width: 1200px;">
+            <div class="admin-header">
+                <h2 class="admin-title">Gerenciamento de Filmes</h2>
+                <p class="admin-subtitle">Cadastre, edite e remova filmes do catálogo</p>
+            </div>
+
+            <!-- Barra de Ferramentas (Toolbar) -->
+            <div class="admin-toolbar">
+                <div class="search-input-wrapper" style="max-width: 300px; width: 100%;">
+                    <input type="text" id="admin-search" placeholder="Buscar filme na tabela...">
+                    <span class="search-icon-inner">🔍</span>
+                </div>
+                <button class="btn-primary" id="btn-novo-filme">+ ADICIONAR NOVO FILME</button>
+            </div>
+
+            <!-- Tabela de Dados -->
+            <div class="table-responsive">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Capa</th>
+                            <th>Título</th>
+                            <th>Ano</th>
+                            <th>Diretor</th>
+                            <th>Estúdio</th>
+                            <th>Gênero</th>
+                            <th class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-movie-list">
+                        <!-- Contêiner vazio aguardando o JS injetar as <tr> dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Paginação da Tabela -->
+            <div class="pagination" id="admin-pagination">
+                <!-- Contêiner vazio aguardando o JS injetar os botões de paginação -->
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <div class="movie-sprocket-icon">
+                <span>•</span><span>•</span><span>•</span>
+            </div>
+            <div class="footer-quote">
+                <p>Área restrita de administração de acervo.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
