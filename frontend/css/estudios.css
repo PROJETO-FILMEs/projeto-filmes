@@ -40,7 +40,8 @@ button { background: none; border: none; color: inherit; cursor: pointer; font-f
 /* =========================================
    Inputs e Botões
    ========================================= */
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     background-color: #0a0a0a;
     border: 1px solid #333;
     color: var(--text-color);
@@ -51,7 +52,8 @@ input[type="text"] {
     width: 100%;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
     outline: none;
     border-color: var(--accent-gold);
 }
@@ -74,8 +76,25 @@ input[type="text"]:focus {
     transform: translateY(-2px);
 }
 
+.btn-secondary {
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 1px solid #555;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    border-color: #888;
+}
+
 /* =========================================
-   Header (Cabeçalho) - COM CORES ATUALIZADAS
+   Header (Cabeçalho)
    ========================================= */
 header {
     background-color: #080808;
@@ -89,37 +108,10 @@ header {
     align-items: center;
 }
 
-.logo { 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-}
-
-/* Aqui as bolinhas do rolo de filme ficam douradas */
-.logo-icon { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 2px; 
-    color: var(--accent-gold); 
-    font-size: 10px; 
-}
-
-.logo h1 { 
-    font-size: 1.3rem; 
-    font-weight: normal; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    color: #fff; 
-}
-
-/* E o subtítulo também fica dourado */
-.logo span { 
-    display: block; 
-    font-size: 0.7rem; 
-    color: var(--accent-gold); 
-    letter-spacing: 1px; 
-    margin-top: -2px; 
-}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; color: #444; font-size: 10px; }
+.logo h1 { font-size: 1.3rem; font-weight: normal; text-transform: uppercase; letter-spacing: 2px; color: #fff; }
+.logo span { display: block; font-size: 0.7rem; color: var(--accent-gold); letter-spacing: 1px; margin-top: -2px; }
 
 nav ul { display: flex; gap: 25px; }
 nav a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; color: #aaaaaa; padding-bottom: 6px; border-bottom: 2px solid transparent; }
@@ -196,7 +188,7 @@ nav a:hover, nav a.active { color: #ffffff; border-bottom: 2px solid #ffffff; }
 }
 
 /* =========================================
-   Tabela de Dados (Serve para Filmes e Diretores)
+   Tabela de Estúdios
    ========================================= */
 .table-responsive {
     width: 100%;
@@ -322,100 +314,6 @@ nav a:hover, nav a.active { color: #ffffff; border-bottom: 2px solid #ffffff; }
 }
 
 /* =========================================
-   Footer (Rodapé)
-   ========================================= */
-footer {
-    padding: 40px 0;
-    margin-top: 40px;
-    border-top: 1px solid #111;
-}
-
-.footer-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.movie-sprocket-icon {
-    color: var(--accent-gold);
-    font-size: 12px;
-    letter-spacing: 4px;
-}
-
-.footer-quote p {
-    color: #666666;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* =========================================
-   Responsividade
-   ========================================= */
-@media (max-width: 900px) {
-    .header-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .admin-container {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .admin-toolbar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .search-input-wrapper {
-        max-width: 100% !important;
-    }
-}
-
-input[type="text"],
-input[type="number"],
-input[type="date"] {
-    background-color: #0a0a0a;
-    border: 1px solid #333;
-    color: var(--text-color);
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-family: var(--font-family);
-    font-size: 0.9rem;
-    width: 100%;
-}
-/* E também no hover/focus */
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-}
-/* Estilo opcional para forçar o ícone do calendário a ficar mais claro no modo escuro */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-
-.modal {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* =========================================
    Modal de Cadastro / Edição
    ========================================= */
 .modal {
@@ -493,4 +391,70 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 30px;
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
+}
+
+/* =========================================
+   Footer (Rodapé)
+   ========================================= */
+footer {
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid #111;
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.movie-sprocket-icon {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.footer-quote p {
+    color: #666666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   Responsividade
+   ========================================= */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .admin-container {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-input-wrapper {
+        max-width: 100% !important;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+    .modal-actions {
+        flex-direction: column;
+    }
+    .modal-actions button {
+        width: 100%;
+    }
 }
